@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>components</title>
+  <link rel="shortcut icon" href="favicon.ico"></head>
+<body>
+<div id="app">
+
+  <x-chart :config="config"/>
+  <lw-cus-div @click="doSth" name="hahh "/>
+
+
+
+</div>
+<script crossorigin="anonymous" integrity="sha384-+jvb+jCJ37FkNjPyYLI3KJzQeD8pPFXUra3B/QJFqQ3txYrUPIP1eOfxK4h3cKZP" src="https://lib.baomitu.com/vue/2.6.11/vue.js"></script>
+<script type="text/javascript" src="project.79345db082.min.js"></script>
+<script>
+  new Vue({
+    el:"#app",
+    data(){
+      return{
+        config:{"otherSetting":{"code":"1","chartHeight":"450px","chartWidth":"700px","chartType":"pie","chartTheme":"inspired","backgroundClass":"bg6","excelData":{"xAxis":["周一","周二","周三","周四","周五","周六","周日","000"],"dataset":[["60"],["11"],[18],[24],[36],[17],["56"],["123"],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null],[null]]},"mode":2},"title":{"text":"周销量","subtext":"","x":"center","y":"top","textAlign":"left","backgroundColor":"rgba(255, 255, 255, 0)","borderWidth":0,"borderColor":"rgba(255, 255, 255, 1)","padding":10,"itemGap":5,"textStyle":{"color":"rgba(0, 0, 0, 1)","fontSize":18,"fontStyle":"normal","fontWeight":"bold","align":"left","baseline":"top"},"subtextStyle":{"color":"rgba(0, 0, 0, 0.65)","fontSize":14,"fontStyle":"normal","fontWeight":"normal","align":"left","baseline":"top"}},"tooltip":{"trigger":"item","formatter":"{a} <br/>{b} : {c} ({d}%)","show":true,"backgroundColor":"rgba(0,0,0,0.7)","borderWidth":0,"borderColor":"#333","borderRadius":4,"padding":5,"textStyle":{"color":"#fff","fontSize":12,"fontStyle":"normal","fontWeight":"normal","align":"center","baseline":"middle"}},"legend":{"orient":"vertical","x":"left","data":["周一","周二","周三","周四","周五","周六","周日","000"],"show":true,"selectedMode":"multiple","y":"top","backgroundColor":"rgba(0,0,0,0)","borderWidth":0,"borderColor":"#ccc","padding":5,"itemWidth":20,"itemHeight":14,"itemGap":10,"textStyle":{"color":"rgba(0, 0, 0, 1)","fontSize":12,"fontStyle":"normal","fontWeight":"normal","align":"center","baseline":"middle"}},"toolbox":{"show":true,"feature":{"mark":{"show":false},"dataView":{"show":true,"readOnly":true},"restore":{"show":false},"saveAsImage":{"show":true}}},"calculable":true,"series":[{"center":["50%","60%"],"name":"默认","type":"pie","radius":[30,150],"data":[{"name":"周一","value":"60"},{"name":"周二","value":"11"},{"name":"周三","value":18},{"name":"周四","value":24},{"name":"周五","value":36},{"name":"周六","value":17},{"name":"周日","value":"56"},{"name":"000","value":"123"}],"roseType":"radius","subSeriesConfigurationCode":"","startAngle":72,"minAngle":0,"selectedMode":"multiple","selectedOffset":20,"itemStyle":{"normal":{"labelLine":{"show":true},"borderWidth":7,"borderColor":"rgba(60, 58, 153, 1)","label":{"show":true,"formatter":"{b} :{c}({d}%)"}}}}],"backgroundColor":"rgba(255, 255, 255, 0)","id":0}
+      }
+    },
+    methods:{
+      doSth(val){
+        console.log(val)
+      }
+    }
+  })
+</script>
+</body>
+</html>
