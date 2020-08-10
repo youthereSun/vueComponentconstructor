@@ -1,6 +1,7 @@
 # Custom Components
 
 > 自定义组件
+> 基于webpack1.13.4，vue2.6.11
 
 ## 准备
 
@@ -48,5 +49,18 @@ const install = function (Vue) {
 * 将自定义组件放入App.vue父组件中，然后运行 `npm run dev` ，在浏览器中输入 http://localhost:8090
 
 
-## 开发教程
+## eslint
+
+增加文件 .eslintignore
+================
+build/*.js
+src/*
+==============
+==============
+.eslintrc.js
+module.exports = {
+  "extends": "vue"
+}
+================
+
 
