@@ -27,7 +27,7 @@ module.exports = merge(baseWebpackConfig, {
   ],
 
     devServer: {
-      publicPath: '/assets/',
+      publicPath: '/assets/',//开发环境资源存放位置
       proxy: {
         '/api': {
           target: 'http://192.168.0.227:8030',  //本地测试接口域名
@@ -38,7 +38,7 @@ module.exports = merge(baseWebpackConfig, {
 
         }
       },
-      host: 'localhost',
+      host: '0.0.0.0',
       port: 8091, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
       autoOpenBrowser: true,
     }

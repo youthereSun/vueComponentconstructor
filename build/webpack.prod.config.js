@@ -4,6 +4,7 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.config')
 var outputDir = path.resolve(__dirname, '../dist')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
   output: {
@@ -14,7 +15,7 @@ module.exports = merge(baseWebpackConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.join(__dirname, '../index.html'),
+      template: path.join(__dirname, '../prod.html'),
       favicon: 'favicon.ico',
       inject: true
     }),
@@ -27,6 +28,7 @@ module.exports = merge(baseWebpackConfig, {
         drop_console: true
       }
     }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new CleanWebpackPlugin()
   ]
 })

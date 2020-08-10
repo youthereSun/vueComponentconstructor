@@ -1,9 +1,9 @@
-import lbiEchart from './components/lbiEchart'
-import cusDiv from "./components/cusDiv";
-import chart from "./components/chart";
+/*import lbiEchart from './components/lbiEchart'*/
+/*import cusDiv from "./components/cusDiv";*/
+import chart from "./components/chart"
 
 const install = function (Vue) {
-  Vue.component(cusDiv.name, cusDiv)
+
   Vue.component(chart.name,chart)
 }
 
